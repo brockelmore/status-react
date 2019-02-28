@@ -100,6 +100,10 @@
   (when (and @node-started status)
     (.signMessage status rpcParams callback)))
 
+(defn hash-transaction [rpcParams callback]
+  (when (and @node-started status)
+    (.hashTransaction status rpcParams callback)))
+
 (defn send-transaction [rpcParams password callback]
   (when (and @node-started status)
     (.sendTransaction status rpcParams password callback)))
